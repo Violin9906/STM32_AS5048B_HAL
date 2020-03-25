@@ -1,8 +1,6 @@
 # STM32_AS5048B_HAL
 > AS5048B Library for STM32(HAL)
 
-[TOC]
-
 ## How To Use
 
 You need to add `./Src/as5048b.c` to your project, and add `./Src/as5048b.h` to your include path.
@@ -33,10 +31,10 @@ More function will add into this library soon.
 ### AS5048B_Init
 
 ```C
-void AS5048B_Init(AS5048B_HandleTypeDef* has5048b, uint8_t ADDRESS, I2C_HandleTypeDef* I2C_Handle);
+HAL_StatusTypeDef AS5048B_Init(AS5048B_HandleTypeDef* has5048b, uint8_t ADDRESS, I2C_HandleTypeDef* I2C_Handle);
 ```
 
-Initialize an AS5048B sensor.
+Initialize an AS5048B sensor. Return value `HAL_OK` on success.
 
 ### AS5048B_Read_RawAngle
 
